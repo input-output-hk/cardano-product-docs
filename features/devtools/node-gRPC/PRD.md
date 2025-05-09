@@ -1,4 +1,4 @@
-# Cardano Node RPC API 
+# Cardano Node gRPC API 
 
 Product Requirements Document[^1]
 
