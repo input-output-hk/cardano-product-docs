@@ -106,26 +106,44 @@ These metrics provide clear insights into where delays or bottlenecks occur, ena
      * Improve error messages during transaction build and submit  
      * Remove support for eras prior to Conway.  
      * Json schemas for CLI outputs.
-2. **Feature expansion**   
+
+2. **Maintenance**  
+   * **Goal:** Ensure long-term sustainability, efficiency, and developer experience improvements and enhancing overall developer quality of life.  
+   * Key items:  
+     * Upgrade to use new API 
+     * Analyze increasing tests coverage with cardano-testnet on CLI repo.
+
+3. **Conway era Feature expansion**   
    * **Goal:** Enhance the cardano-cli feature set with new capabilities.  
    * **Key items:**  
      * Feasibility analyzis for functionality to **balance hydra-generated incomplete transactions.**  
      * Add support for **CIP129** and DREP IDs.  
      * Develop a command to **decode CLI certificates** into a human-readable format  
      * Investigate the feasibility of **validating transactions** against the current ledger state **without submission.**  
-     * How can we improve UX in build? it has grown too big. Perhaps break it down in pieces? Partially construct bits of tx-body? A command for simple transactions? Better documentation? Interactive?   
-     * **Nested transactions:** Prepare for potential integration of Nested transactions (CIP118). This will be implemented by ledger, probably in a feature branch? This will need extensive changes to the CDDL.   
-     * **Hardware wallet support.**   
-     * **Ouroboros Peras preparation:** Investigate and document any potential requirements  
-3. **Documentation**  
+     * How can we improve UX in build? it has grown too big. Perhaps break it down in pieces? Partially construct bits of tx-body? A command for simple transactions? Better documentation? Interactive?    
+
+4. **Hardware wallet support.**
+   * **Goal:** Decide if/how to integrate HW support in cardano-cli
+   * **Key items:**
+      * ADR  
+
+5. **Nested transactions:**\
+   * **Goal:**  Prepare for potential integration of Nested transactions (CIP118). This will be implemented by ledger, probably in a feature branch? This will need extensive changes to the CDDL, therefore a new era. Do not start too early. Wait for Spec and CDDL to stabilize. 
+   * **Key items:** 
+     * Deisgn of new Commands based on CDDL.
+     * Changes o existing commands.
+
+6. **Ouroboros upgrade preparation:** Investigate and document potential requirements, depends on community decisions about priorities.    
+   * **Goal:**  Prepare for potential integration of any protocol upgrades. 
+   * **Key items:** 
+     * Deisgn of new Commands based on specifications.
+     * Changes o existing commands.
+
+7. **Documentation**  
    * **Goal:** Ensure clear, comprehensive, and up-to-date documentation to improve user onboarding, enhance developer experience, and facilitate easier adoption of new features.  
    * Key items:  
-     * Update README with link to developers.cardano.org  
+     * Update README 
      * Comprehensive command reference for new features.  
-     * Ensure 100% coverage of features.   
+     * Ensure >95% coverage of features.   
      * Troubleshooting & debugging documentation  
-4. **Maintenance**  
-   * **Goal:** Ensure long-term sustainability, efficiency, and developer experience improvements and enhancing overall developer quality of life.  
-   * Key items:  
-     * Upgrade to use new API 
-     * Analyze increasing tests coverage with cardano-testnet on CLI repo.
+
